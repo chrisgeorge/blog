@@ -6,5 +6,3 @@ class Post(models.Model):
     body = models.TextField()
     title = models.CharField(max_length=255)
     date = models.DateField()
-
-# Create your models here.
