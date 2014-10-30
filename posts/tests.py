@@ -41,5 +41,10 @@ class PostViewTest(TestCase):
 
         response = client.get('/posts/')
         templates = [template.name for template in response.templates]
+        all_posts = response.context['post_list']
+
+        self.assertIn(post_one, all_posts)
+        self.assertIn(second_post, all_posts)
+        self.assertIn(third_post, all_posts)
         self.assertEqual(response.status_code, 200)
         self.assertIn('index.html', templates)
