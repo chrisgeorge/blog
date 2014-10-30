@@ -20,9 +20,9 @@ class PostModelTest(TestCase):
     def test_returns_created_1_day_ago_if_created_yeterday(self):
         post = Post.objects.create(author="Me", title="How to test django",
                                    body="Some body", date="2014-10-29")
-        self.assertEqual(post.created_at(), 'created 1 day ago')
+        self.assertEqual(post.created_at(), 'posted 1 day ago')
 
     def test_returns_created_2_days_ago_if_created_yeterday(self):
         post = Post.objects.create(author="Me", title="How to test django",
                                    body="Some body", date="2014-10-28")
-        self.assertEqual(post.created_at(), 'created 2 days ago')
+        self.assertEqual(post.created_at(), 'posted 2 days ago')

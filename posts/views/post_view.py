@@ -9,4 +9,4 @@ class ListPosts(ListView):
     model = Post
 
     def get(self, *args, **kwargs):
-        return super(ListPosts, self).get(*args, **kwargs)
+    	return super(ListPosts, self).get(*args, **kwargs)
