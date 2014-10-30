@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from posts.views import ListPosts
+from posts.views.post_view import ListPosts
 
 urlpatterns = patterns('',
     url(r'^posts/$', ListPosts.as_view(), name="posts_list"),
